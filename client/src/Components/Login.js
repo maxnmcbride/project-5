@@ -1,32 +1,56 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-function Login() {
+function Login({ setUser }) {
+
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const navigate = useNavigate();
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        fetch("/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ username, password }),
+        }).then((response) => {
+            if (response.ok) {
+                response.json().then((user) => {
+                    setUser(user)
+                    navigate("/userpage")
+                });
+            } else {
+                response.json().then()
+                // NEED TO ADD ERROR HANDLING
+            }
+        });
+    }
 
     return (
         <>
-            <nav>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/signup">Sign Up</Link></li>
-                    <li><Link to="/userpage">User Page</Link></li>
-                    <li><Link to="/videogames">Video Games</Link></li>
-                </ul>
-            </nav>
             <div>
-                <h1>We're on the Login Page</h1>
+                <h1>We're in the Log In Component</h1>
             </div>
-            <div>
-                <form>
+            <div className="login">
+                <form onSubmit={handleSubmit}>
+                    <h2>Log In</h2>
                     <label>
                         Username:
-                        <input type="text" value={""} onChange={""}/>
-                        {/* the value is going to be set to the state, so for this it will be username */}
+                        <input
+                            type="text"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)} />
                     </label>
                     <label>
                         Password:
-                        <input type="text" value={""} onChange={""}/>
+                        <input 
+                        type="text" 
+                        value={password} 
+                        onChange={(e) => setPassword(e.target.value)} />
                     </label>
-                    <button>Log In</button>
+                    <button type="submit">Log In</button>
                 </form>
             </div>
         </>
