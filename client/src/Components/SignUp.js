@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-function SignUp() {
+function SignUp({ setUser }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
     const [email, setEmail] = useState("");
+    const navigate = useNavigate();
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -18,11 +19,17 @@ function SignUp() {
                 username,
                 password,
                 password_confirmation: passwordConfirmation,
-                email,
+                email
             }),
         }).then((response) => {
             if (response.ok) {
-                response.json().then((user) => console.log(user));
+                response.json().then((user) => {
+                    setUser(user)
+                    navigate("/userpage")
+                });
+            } else {
+                response.json().then()
+                // NEED TO ADD ERROR HANDLING 
             }
         });
     }
