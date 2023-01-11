@@ -3,7 +3,7 @@ import Login from "./Login";
 
 function Homepage({setUser}) {
     return (
-        <>
+        <div className="homepage">
             <nav>
                 <ul>
                     {/* <li><Link to="/signup">Sign Up</Link></li> */}
@@ -19,7 +19,7 @@ function Homepage({setUser}) {
                 <Login setUser={setUser}/>
             </div>
             <button><Link to="/signup">Sign Up</Link></button>
-        </>
+        </div>
     );
 }
 
