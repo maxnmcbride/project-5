@@ -13,8 +13,10 @@ function App() {
 
   useEffect(() => {
     fetch("/currentuser")
-      .then((response) => {if (response.ok){response.json()
-      .then((user) => setUser(user))}
+      .then((response) => {
+         if (response.ok){
+            response.json().then((user) => setUser(user))
+         }
       });
   }, []);
 
