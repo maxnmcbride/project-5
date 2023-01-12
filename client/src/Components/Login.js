@@ -30,10 +30,7 @@ function Login({ setUser }) {
 
     return (
         <>
-            <div>
-                <h1>We're in the Log In Component</h1>
-            </div>
-            <div className="login">
+            <div id="login">
                 <form onSubmit={handleSubmit}>
                     <h2>Log In</h2>
                     <label>

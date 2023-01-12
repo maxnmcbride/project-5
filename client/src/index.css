@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
 code {
@@ -13,8 +19,16 @@ code {
 }
 
 
-/* .homepage {background-image: url("./gamecafe.gif") no-repeat center center fixed; 
--webkit-background-size: cover;
+#homepage {
+  background-color: blueviolet;
+  background: url("./gamecafe.gif") no-repeat center center fixed;
+  -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
-background-size: cover;} */
+  background-size: cover;
+  height: 100vh;
+}
+
+#login{
+
+}

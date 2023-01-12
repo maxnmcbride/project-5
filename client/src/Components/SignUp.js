@@ -4,7 +4,7 @@ import { useState } from "react";
 function SignUp({ setUser }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [passwordConfirmation, setPasswordConfirmation] = useState("");
+    const [password_confirmation, setPassword_confirmation] = useState("");
     const [email, setEmail] = useState("");
     const navigate = useNavigate();
 
@@ -18,7 +18,7 @@ function SignUp({ setUser }) {
             body: JSON.stringify({
                 username,
                 password,
-                password_confirmation: passwordConfirmation,
+                password_confirmation,
                 email
             }),
         }).then((response) => {
@@ -72,8 +72,8 @@ function SignUp({ setUser }) {
                         <input
                             type="password"
                             id="password_confirmation"
-                            value={passwordConfirmation}
-                            onChange={(e) => setPasswordConfirmation(e.target.value)}
+                            value={password_confirmation}
+                            onChange={(e) => setPassword_confirmation(e.target.value)}
                             autoComplete="off" />
                     </label>
                     <label className="signup_form" htmlFor="email">
