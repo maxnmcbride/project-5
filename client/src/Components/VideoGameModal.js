@@ -1,20 +1,28 @@
 
-function VideoGameModal({gameData}) {
-    
-    console.log("vg modal:", gameData)
+function VideoGameModal({ gameData }) {
 
-    const mappedGameData = gameData.map((gameObj)=>{
-        return(
-            gameObj.title
+    const mappedGameData = gameData.map((gameObj) => {
+
+        return (
+            <div>
+                <h1>Title:{gameObj.title}</h1>
+                <div>
+                    <h2>Description:</h2>
+                    <p>{gameObj.game_description}</p>
+                </div>
+
+            </div>
         )
     })
 
-    console.log(mappedGameData)
+    // developer, game_description, genre, id, image_url, multiplayer (boolean)
+    // platform, release_date, theme, title
 
-    return ( 
-        <div className="modal" id="modal">
+    return (
+        <div>
+            <mappedGameData />
         </div>
-     );
+    );
 }
 
 export default VideoGameModal;

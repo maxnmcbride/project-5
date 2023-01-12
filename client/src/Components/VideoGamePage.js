@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import {useState, useEffect} from "react";
-import VideoGameCard from "./VideoGameCard";
+// import VideoGameCard from "./VideoGameCard";
 import VideoGameModal from "./VideoGameModal";
 
 function VideoGamePage() {
@@ -13,9 +13,10 @@ useEffect(()=>{
     .then(setGameData)
 }, []) 
 
-// console.log(gameData)
+console.log(gameData)
 
-const gameArrayMapped = game.map((gameObj)=> <VideoGameCard game={gameObj}/>)
+// NEED TO FIX THIS MAP FUNCTION
+// const GameArrayMapped = gameData.map((gameObj)=> {<VideoGameModal gameData={gameObj}/>})
 
 
     return ( 
@@ -28,7 +29,7 @@ const gameArrayMapped = game.map((gameObj)=> <VideoGameCard game={gameObj}/>)
             </ul>
         </nav>
         <div>
-            <VideoGameModal gameData={gameData}/>
+            {/* <GameArrayMapped/> */}
         </div>
     </>
      );

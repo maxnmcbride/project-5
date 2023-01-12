@@ -1,10 +1,8 @@
 function VideoGameCard() {
 
-    const clicked = () =>{ console.log('clicked') }
-
     return ( 
         <div>
-            <button onClick={clicked}>VG Card Stand In</button>
+            <button>VG Card Stand In</button>
         </div>
     );
 }
