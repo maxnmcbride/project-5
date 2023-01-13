@@ -4,8 +4,8 @@ class GamesController < ApplicationController
     end
 
     # def show
-    #     discussion= Discussion.find(params[:id])
-    #     render json: discussion
+    #     game= Game.find(params[:id])
+    #     render json: game
     # end
 
 end

@@ -6,11 +6,6 @@ function VideoGameModal({ gameData }) {
         return (
             <div>
                 <h1>Title:{gameObj.title}</h1>
-                <div>
-                    <h2>Description:</h2>
-                    <p>{gameObj.game_description}</p>
-                </div>
-
             </div>
         )
     })
@@ -20,7 +15,7 @@ function VideoGameModal({ gameData }) {
 
     return (
         <div>
-            <mappedGameData />
+            {mappedGameData}
         </div>
     );
 }
