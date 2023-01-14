@@ -12,6 +12,13 @@ function VideoGamePage() {
             .then(setGameData)
     }, [])
 
+    // LEFT OFF HERE TRYING TO HAVE MY NEWLY CREATED GAMES ADDED TO THE GAME ARRAY TO BE DISPLAYED
+    const addNewGameToGamePage = (game) => {
+        const copyOfDiscussion = { ...discussion, comments: [...discussion.comments, comment] }
+        setDiscussion(copyOfDiscussion)
+        // console.log("totally ready to add this comment to discussion", comment )
+    }
+
     console.log(gameData)
 
     const GameArrayMapped = gameData.map((gameObj) => <VideoGameCard key={gameObj.id} gameData={gameObj} />)

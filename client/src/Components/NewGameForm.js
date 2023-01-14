@@ -1,5 +1,5 @@
 import { Button, Checkbox, Form, Input, TextArea, Select } from 'semantic-ui-react'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function NewGameForm() {
 
