@@ -4,6 +4,7 @@ import SignUp from "./Components/SignUp";
 import Homepage from "./Components/Homepage";
 import Userpage from "./Components/Userpage";
 import VideoGamePage from "./Components/VideoGamePage";
+import GameFormPage from './Components/GameFormPage';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/" element={<Homepage setUser={setUser} />}></Route>
         <Route path="/userpage" element={<Userpage/>}/>
         <Route path="/videogames" element={<VideoGamePage/>}/>
+        <Route path="/newgameform" element={<GameFormPage/>}/>
       </Routes>
     </>
   );

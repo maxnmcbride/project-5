@@ -30,6 +30,7 @@ function VideoGamePage() {
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/userpage">User Page</Link></li>
+                    <li><Link to="/newgameform">Add New Game</Link></li>
                 </ul>
             </nav>
             <div>
