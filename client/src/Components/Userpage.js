@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import MyGameLibrary from "./MyGameLibrary";
 
-function Userpage() {
+function Userpage({user}) {
     return (
-        <>
+        <div>
             <h1>We're on the User Page</h1>
             <nav>
                 <ul>
@@ -10,7 +11,10 @@ function Userpage() {
                     <li><Link to="/videogames">Video Games</Link></li>
                 </ul>
             </nav>
-        </>
+            <div>
+                <MyGameLibrary user={user}/>
+            </div>
+        </div>
     );
 }
 

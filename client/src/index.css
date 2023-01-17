@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -18,13 +18,12 @@ code {
     monospace;
 }
 
-
 #homepage {
   background-color: blueviolet;
   background: url("./gamecafe.gif") no-repeat center center fixed;
   -webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   height: 100vh;
 }
@@ -33,7 +32,7 @@ code {
 
 } */
 
-.card{
+.card {
   position: relative;
   text-align: center;
   display: inline-flex;
@@ -42,10 +41,34 @@ code {
 
 #signuppage {
   background-color: blueviolet;
-  background: url("./sign-up-cafe.gif") no-repeat center center fixed;
+  background: url("/Users/max/Desktop/project-5/client/src/Components/images/sign-up-cafe.gif") no-repeat center center fixed;
   -webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   height: 100vh;
+}
+
+#gameformpage{
+  background-color: blueviolet;
+  background: url("/Users/max/Desktop/project-5/client/src/Components/images/aliencoffee.gif") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
+
+#newgameformdescription{
+  color:white;
+}
+
+.newgamelabeltext{
+  color:white;
+  font-size: 2rem;
+}
+
+#newgameform{
+  width: 50%;
+  align-items: center;
 }

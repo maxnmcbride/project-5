@@ -2,12 +2,12 @@ function GameCard({ gameData }) {
 
     return (
         <div className="card">
-            <div class="ui card">
-                <div class="image">
+            <div className="ui card">
+                <div className="image">
                     <img src={gameData.image_url} />
                 </div>
-                <div class="content">
-                    <a class="header">{gameData.title}</a>
+                <div className="content">
+                    <p className="header">{gameData.title}</p>
                 </div>
             </div>
         </div>

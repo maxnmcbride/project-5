@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function GameFormPage() {
     return (
-        <div>
+        <div id="gameformpage">
             <ul>
                 <li><Link to="/videogames">Video Games</Link></li>
             </ul>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import VideoGameCard from "./VideoGameCard";
+// import VideoGameCard from "./VideoGameCard";
 import GameCard from "./GameCard";
 
 function VideoGamePage() {
@@ -20,11 +20,10 @@ function VideoGamePage() {
     //     // console.log("totally ready to add this comment to discussion", comment )
     // }
 
-    console.log(gameData)
-
-    const GameArrayMapped = gameData.map((gameObj) => <VideoGameCard key={gameObj.id} gameData={gameObj} />)
+    // const GameArrayMapped = gameData.map((gameObj) => <VideoGameCard key={gameObj.id} gameData={gameObj} />)
+   
     const GameArrayMappedForCards = gameData.map((gameObj) => <GameCard key={gameObj.id} gameData={gameObj} />)
-    const clicked = () => {console.log("I was clicked")}
+    const clicked = () => {console.log('clicked')}
 
     return (
         <>
@@ -40,7 +39,6 @@ function VideoGamePage() {
                 <div onClick={clicked} className="game_cards">
                     {GameArrayMappedForCards}
                 </div>
-                {GameArrayMapped}
             </div>
         </>
     );

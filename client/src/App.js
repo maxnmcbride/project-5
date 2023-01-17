@@ -6,12 +6,11 @@ import Userpage from "./Components/Userpage";
 import VideoGamePage from "./Components/VideoGamePage";
 import GameFormPage from './Components/GameFormPage';
 
-
 function App() {
 
   const [user, setUser] = useState(false);
 
-  console.log(user)
+  // console.log(user.games)
 
   useEffect(() => {
     fetch("/currentuser")
@@ -27,7 +26,7 @@ function App() {
       <Routes>
         <Route path="/signup" element={<SignUp setUser={setUser}/>} />
         <Route path="/" element={<Homepage setUser={setUser} />}></Route>
-        <Route path="/userpage" element={<Userpage/>}/>
+        <Route path="/userpage" element={<Userpage user={user}/>}/>
         <Route path="/videogames" element={<VideoGamePage/>}/>
         <Route path="/newgameform" element={<GameFormPage/>}/>
       </Routes>
