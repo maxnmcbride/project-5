@@ -61,7 +61,6 @@ function NewGameForm() {
                         <Form.Field
                             id='form-input-control-game-description'
                             control={TextArea}
-                            label='Description'
                             placeholder='Description: Please copy the description written by the game developer, not your own summary. We recognize this takes a little research, and appreciate your effort in adding to our community!'
                             value={game_description}
                             onChange={(e) => setGame_description(e.target.value)}
