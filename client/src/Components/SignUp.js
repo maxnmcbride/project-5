@@ -34,10 +34,8 @@ function SignUp({ setUser }) {
         });
     }
 
-
-
     return (
-        <>
+        <div id="signuppage">
             <nav>
                 <ul>
                     <li><Link to="/">Home</Link></li>
@@ -88,7 +86,7 @@ function SignUp({ setUser }) {
                     <button>Sign Up</button>
                 </form>
             </div>
-        </>
+        </div>
     );
 }
 

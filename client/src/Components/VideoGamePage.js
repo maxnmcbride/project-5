@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import VideoGameCard from "./VideoGameCard";
+import GameCard from "./GameCard";
 
 function VideoGamePage() {
 
@@ -22,6 +23,8 @@ function VideoGamePage() {
     console.log(gameData)
 
     const GameArrayMapped = gameData.map((gameObj) => <VideoGameCard key={gameObj.id} gameData={gameObj} />)
+    const GameArrayMappedForCards = gameData.map((gameObj) => <GameCard key={gameObj.id} gameData={gameObj} />)
+    const clicked = () => {console.log("I was clicked")}
 
     return (
         <>
@@ -34,6 +37,9 @@ function VideoGamePage() {
                 </ul>
             </nav>
             <div>
+                <div onClick={clicked} className="game_cards">
+                    {GameArrayMappedForCards}
+                </div>
                 {GameArrayMapped}
             </div>
         </>

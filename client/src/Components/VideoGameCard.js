@@ -2,7 +2,6 @@ function VideoGameCard({ gameData }) {
 
     return (
         <div>
-                <img src={gameData.image_url} />
                 <> <h3>Title:</h3> <p> {gameData.title}</p> </>
                 <> <h3>Genre:</h3> <p> {gameData.genre}</p> </>
                 <> <h3>Theme:</h3> <p> {gameData.theme}</p> </>

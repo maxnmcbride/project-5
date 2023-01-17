@@ -29,6 +29,23 @@ code {
   height: 100vh;
 }
 
-#login{
+/* #login{
 
+} */
+
+.card{
+  position: relative;
+  text-align: center;
+  display: inline-flex;
+  margin: 10px;
+}
+
+#signuppage {
+  background-color: blueviolet;
+  background: url("./sign-up-cafe.gif") no-repeat center center fixed;
+  -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
 }
