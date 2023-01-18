@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-// import VideoGameCard from "./VideoGameCard";
 import GameCard from "./GameCard";
+import {Button} from "semantic-ui-react";
 
 function VideoGamePage({user}) {
 
@@ -28,14 +28,14 @@ function VideoGamePage({user}) {
     
     return (
         <>
-            <h1>We're on the Video Game Page</h1>
             <nav>
                 <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/userpage">User Page</Link></li>
-                    <li><Link to="/newgameform">Add New Game</Link></li>
+                    <Button><Link to="/">Home</Link></Button>
+                    <Button><Link to="/userpage">User Page</Link></Button>
+                    <Button><Link to="/newgameform">Add New Game</Link></Button>
                 </ul>
             </nav>
+            <h1>We're on the Video Game Page</h1>
             <div>
                 <div>
                     {GameArrayMappedForCards}

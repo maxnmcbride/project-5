@@ -14,7 +14,6 @@ function MyGameLibrary({ user }) {
     // 
     return (
         <div>
-
             {userGameData}
         </div>
     );

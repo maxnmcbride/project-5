@@ -15,7 +15,8 @@ function Homepage({ setUser }) {
             </div>
             <div>
                 <Login setUser={setUser} />
-                <Button><Link to="/signup">Sign Up</Link></Button>
+                <br/>
+                <Button><Link to="/signup" id="link">Sign Up</Link></Button>
             </div>
         </div>
     );

@@ -7,9 +7,12 @@ import 'semantic-ui-css/semantic.min.css';
 import './index.css';
 
 ReactDOM.render(
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>,
+  <BrowserRouter>
+    <style>
+      @import url('https://fonts.cdnfonts.com/css/spacetype');
+    </style>
+    <App />
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
