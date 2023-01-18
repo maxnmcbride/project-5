@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { Button, Form } from "semantic-ui-react"
 
 function SignUp({ setUser }) {
     const [username, setUsername] = useState("");
@@ -43,47 +44,54 @@ function SignUp({ setUser }) {
                     <li><Link to="/videogames">Video Games</Link></li>
                 </ul>
             </nav>
-            <h1>We're on the Sign Up Page</h1>
             <div>
-                <form onSubmit={handleSubmit}>
-                    <label className="signup_form" htmlFor="username">
-                        Username:
-                        <input
-                            type="text"
-                            id="username"
-                            autoComplete="off"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)} />
-                    </label>
-                    <label className="signup_form" htmlFor="password">
-                        Password:
-                        <input
-                            type="password"
-                            id="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            autoComplete="off" />
-                    </label>
-                    <label className="signup_form" htmlFor="password">
-                        Confirm Password:
-                        <input
-                            type="password"
-                            id="password_confirmation"
-                            value={password_confirmation}
-                            onChange={(e) => setPassword_confirmation(e.target.value)}
-                            autoComplete="off" />
-                    </label>
-                    <label className="signup_form" htmlFor="email">
-                        Email:
-                        <input
-                            type="text"
-                            id="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            autoComplete="off" />
-                    </label>
-                    <button>Sign Up</button>
-                </form>
+                <Form onSubmit={handleSubmit}>
+                    <Form.Field>
+                        <label id="signup_form" htmlFor="username">
+                            Username:
+                            <input
+                                type="text"
+                                id="username"
+                                autoComplete="off"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)} />
+                        </label>
+                    </Form.Field>
+                    <Form.Field>
+                        <label id="signup_form" htmlFor="password">
+                            Password:
+                            <input
+                                type="password"
+                                id="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                autoComplete="off" />
+                        </label>
+                    </Form.Field>
+                    <Form.Field>
+                        <label id="signup_form" htmlFor="password">
+                            Confirm Password:
+                            <input
+                                type="password"
+                                id="password_confirmation"
+                                value={password_confirmation}
+                                onChange={(e) => setPassword_confirmation(e.target.value)}
+                                autoComplete="off" />
+                        </label>
+                    </Form.Field>
+                    <Form.Field>
+                        <label id="signup_form" htmlFor="email">
+                            Email:
+                            <input
+                                type="text"
+                                id="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                autoComplete="off" />
+                        </label>
+                    </Form.Field>
+                    <Button type="submit">Sign Up</Button>
+                </Form>
             </div>
         </div>
     );

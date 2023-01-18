@@ -1,12 +1,12 @@
-import { useState } from "react"
+// import { useState } from "react"
 
 function GameCard({ gameData, user }) {
 
     const clicked = () => { console.log('clicked') }
-    const clicked2 = () => { console.log('button') }
+    // const clicked2 = () => { console.log('button') }
     // console.log(gameData)
 
-    const[game_id, setGameId] = useState("")
+    // const[game_id, setGameId] = useState("")
 
     // need to bring in user from App
 
@@ -34,7 +34,7 @@ function GameCard({ gameData, user }) {
         <div className="card">
             <div className="ui card">
                 <div onClick={clicked} className="image">
-                    <img src={gameData.image_url} />
+                    <img src={gameData.image_url} alt={gameData.title}/>
                 </div>
                 <div className="content">
                     <p onClick={clicked} className="header">{gameData.title}</p>

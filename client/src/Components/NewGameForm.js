@@ -26,8 +26,7 @@ function NewGameForm() {
                 genre,
                 image_url,
                 multiplayer,
-                platform,
-                release_date,
+                platform,                release_date,
                 theme,
                 title
             }),

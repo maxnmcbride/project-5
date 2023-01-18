@@ -28,10 +28,6 @@ code {
   height: 100vh;
 }
 
-/* #login{
-
-} */
-
 .card {
   position: relative;
   text-align: center;
@@ -72,4 +68,13 @@ code {
   width: 50%;
   align-items: center;
   background-color: brown;
+}
+
+#signup_form{
+  color:white;
+}
+
+#login{
+  width: 50%;
+  align-items: center;
 }

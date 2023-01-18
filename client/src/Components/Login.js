@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { Button, Form } from 'semantic-ui-react'
 
 function Login({ setUser }) {
 
@@ -29,28 +30,29 @@ function Login({ setUser }) {
     }
 
     return (
-        <>
-            <div id="login">
-                <form onSubmit={handleSubmit}>
-                    <h2>Log In</h2>
+            <div>
+                <Form id="login" onSubmit={handleSubmit}>
                     <label>
                         Username:
-                        <input
-                            type="text"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)} />
+                        <Form.Field>
+                            <input
+                                type="text"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)} />
+                        </Form.Field>
                     </label>
                     <label>
                         Password:
-                        <input 
-                        type="password" 
-                        value={password} 
-                        onChange={(e) => setPassword(e.target.value)} />
+                        <Form.Field>
+                            <input
+                                type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)} />
+                        </Form.Field>
                     </label>
-                    <button type="submit">Log In</button>
-                </form>
+                    <Button type="submit">Log In</Button>
+                </Form>
             </div>
-        </>
     );
 }
 

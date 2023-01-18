@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Login from "./Login";
+import {Button} from "semantic-ui-react"
 
 function Homepage({ setUser }) {
     return (
@@ -14,7 +15,7 @@ function Homepage({ setUser }) {
             </div>
             <div>
                 <Login setUser={setUser} />
-                <button><Link to="/signup">Sign Up</Link></button>
+                <Button><Link to="/signup">Sign Up</Link></Button>
             </div>
         </div>
     );
