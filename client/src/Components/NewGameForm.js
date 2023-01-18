@@ -1,4 +1,4 @@
-import { Button, Checkbox, Form, Input, TextArea, Select } from 'semantic-ui-react'
+import { Form, Input, TextArea } from 'semantic-ui-react'
 import { useState } from 'react';
 
 function NewGameForm() {
@@ -41,9 +41,7 @@ function NewGameForm() {
         });
     }
     // useEffect() will need to be on our video game page so that the new games will be populated upon submitting a game
-
-    console.log(multiplayer)
-
+   
     return (
         <div>
             <h1 id="newgameformdescription">New Game Form</h1>

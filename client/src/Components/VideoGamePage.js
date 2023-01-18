@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 // import VideoGameCard from "./VideoGameCard";
 import GameCard from "./GameCard";
 
-function VideoGamePage() {
+function VideoGamePage({user}) {
 
     const [gameData, setGameData] = useState([])
 
@@ -22,9 +22,10 @@ function VideoGamePage() {
 
     // const GameArrayMapped = gameData.map((gameObj) => <VideoGameCard key={gameObj.id} gameData={gameObj} />)
    
-    const GameArrayMappedForCards = gameData.map((gameObj) => <GameCard key={gameObj.id} gameData={gameObj} />)
-    const clicked = () => {console.log('clicked')}
+    const GameArrayMappedForCards = gameData.map((gameObj) => <GameCard user={user} key={gameObj.id} gameData={gameObj} />)
 
+
+    
     return (
         <>
             <h1>We're on the Video Game Page</h1>
@@ -36,7 +37,7 @@ function VideoGamePage() {
                 </ul>
             </nav>
             <div>
-                <div onClick={clicked} className="game_cards">
+                <div>
                     {GameArrayMappedForCards}
                 </div>
             </div>

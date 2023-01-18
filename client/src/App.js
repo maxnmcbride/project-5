@@ -27,7 +27,7 @@ function App() {
         <Route path="/signup" element={<SignUp setUser={setUser}/>} />
         <Route path="/" element={<Homepage setUser={setUser} />}></Route>
         <Route path="/userpage" element={<Userpage user={user}/>}/>
-        <Route path="/videogames" element={<VideoGamePage/>}/>
+        <Route path="/videogames" element={<VideoGamePage user={user}/>}/>
         <Route path="/newgameform" element={<GameFormPage/>}/>
       </Routes>
     </>
