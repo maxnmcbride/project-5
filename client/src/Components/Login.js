@@ -30,29 +30,29 @@ function Login({ setUser }) {
     }
 
     return (
-            <div>
-                <Form id="login" onSubmit={handleSubmit}>
-                    <label>
-                        Username:
-                        <Form.Field>
-                            <input
-                                type="text"
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)} />
-                        </Form.Field>
-                    </label>
-                    <label>
-                        Password:
-                        <Form.Field>
-                            <input
-                                type="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)} />
-                        </Form.Field>
-                    </label>
-                    <Button type="submit">Log In</Button>
-                </Form>
-            </div>
+        <div>
+            <Form id="login" onSubmit={handleSubmit}>
+                <label className='newgamelabeltext'>
+                    Username:
+                </label>
+                <Form.Field>
+                    <input
+                        type="text"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)} />
+                </Form.Field>
+                <label className='newgamelabeltext'>
+                    Password:
+                </label>
+                <Form.Field>
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)} />
+                </Form.Field>
+                <Button type="submit">Log In</Button>
+            </Form>
+        </div>
     );
 }
 

@@ -2,7 +2,7 @@ class UserGamesController < ApplicationController
 
     def create
         params[:user_id] = session[:user_id]
-        validates :game_id, uniqueness: true
+        # validates :game_id, uniqueness: true
         usergame = UserGame.create!(user_games_params)
         render json: usergame, status: :created
     end

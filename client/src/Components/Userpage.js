@@ -12,14 +12,14 @@ function Userpage({ user, setUser }) {
     }
 
     return (
-        <div>
+        <div id="userpage">
             <nav>
                 <ul>
                     <Button onClick={handleLogOut}>Log Out</Button>
                     <Button><Link to="/videogames">Video Games</Link></Button>
                 </ul>
             </nav>
-            <h1>We're on the User Page</h1>
+            <h1 className="userpage_text">We're On {user.username}'s  User Page</h1>
             <div>
                 <MyGameLibrary user={user} />
             </div>

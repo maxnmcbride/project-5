@@ -23,8 +23,6 @@ function VideoGamePage({user}) {
     // const GameArrayMapped = gameData.map((gameObj) => <VideoGameCard key={gameObj.id} gameData={gameObj} />)
    
     const GameArrayMappedForCards = gameData.map((gameObj) => <GameCard user={user} key={gameObj.id} gameData={gameObj} />)
-
-
     
     return (
         <>

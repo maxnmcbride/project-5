@@ -27,6 +27,13 @@ code {
   background-size: cover;
   height: 100vh;
 }
+#userpage{  background-color: blueviolet;
+  background: url("/Users/max/Desktop/project-5/client/src/Components/images/userpagemock.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh}
 
 .card {
   position: relative;
@@ -65,6 +72,12 @@ code {
   font-family: 'SpaceType', sans-serif;
 }
 
+.userpage_text{
+  color:white;
+  font-size: 2rem;
+  font-family: 'SpaceType', sans-serif;
+}
+
 #newgameform{
   width: 50%;
   align-items: center;
@@ -75,6 +88,14 @@ code {
 }
 
 #login{
-  width: 50%;
   align-items: center;
+}
+
+#signUplink{
+  margin-top: 2px;
+}
+
+#homepage_login{
+  margin-top: 8rem;
+  padding: 15rem;
 }

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Login from "./Login";
-import {Button} from "semantic-ui-react"
+import { Button } from "semantic-ui-react"
 
 function Homepage({ setUser }) {
     return (
@@ -13,10 +13,11 @@ function Homepage({ setUser }) {
             </nav>
             <div>
             </div>
-            <div>
+            <div id="homepage_login">
                 <Login setUser={setUser} />
-                <br/>
-                <Button><Link to="/signup" id="link">Sign Up</Link></Button>
+                <div id="signUplink">
+                    <Button><Link to="/signup">Sign Up</Link></Button>
+                </div>
             </div>
         </div>
     );
