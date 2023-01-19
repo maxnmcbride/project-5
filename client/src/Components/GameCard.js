@@ -4,7 +4,6 @@ function GameCard({ gameData, user }) {
 
     const clicked = () => { console.log('clicked') }
 
-    // console.log(gameData.id)
 
     function addToMyLibrary() {
         fetch("/user_games", {

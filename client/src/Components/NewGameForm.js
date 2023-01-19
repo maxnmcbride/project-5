@@ -1,7 +1,7 @@
 import { Form, Input, TextArea } from 'semantic-ui-react'
 import { useState } from 'react';
 
-function NewGameForm() {
+function NewGameForm({setGameData}) {
 
     const [developer, setDeveloper] = useState("")
     const [game_description, setGame_description] = useState("")
@@ -26,20 +26,20 @@ function NewGameForm() {
                 genre,
                 image_url,
                 multiplayer,
-                platform,                release_date,
+                platform,                
+                release_date,
                 theme,
                 title
             }),
         }).then((response) => {
             if (response.ok) {
-                response.json().then(console.log('gotta add where this is going to be used in useEffect'));
+                response.json().then(setGameData);
             } else {
                 console.log('oh boy')
                 // add error handling here!
             }
         });
     }
-    // useEffect() will need to be on our video game page so that the new games will be populated upon submitting a game
    
     return (
         <div>

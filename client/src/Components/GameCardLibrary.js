@@ -1,23 +1,16 @@
-// import { useState } from "react"
-
 function GameCardLibrary({ gameData, user }) {
 
-    const clicked = () => { console.log('clicked') }
-    // const clicked2 = () => { console.log('button') }
-    // console.log(gameData)
-
-    // const [game_id, setGameId] = useState("")
-
+    function removeFromMyLibrary() {fetch(`/user_games/${gameData.id}`, {method: "DELETE"});}
 
     return (
         <div className="card">
             <div className="ui card">
-                <div onClick={clicked} className="image">
+                <div className="image">
                     <img src={gameData.image_url} alt={gameData.title}/>
                 </div>
                 <div className="content">
-                    <p onClick={clicked} className="header">{gameData.title}</p>
-                    <button className="ui button">- Remove From My Library</button>
+                    <p className="header">{gameData.title}</p>
+                    <button className="ui button" onClick={removeFromMyLibrary}>- Remove From My Library</button>
                 </div>
             </div>
         </div>
