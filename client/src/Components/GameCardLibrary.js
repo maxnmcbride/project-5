@@ -1,12 +1,14 @@
 function GameCardLibrary({ gameData, user }) {
 
-    function removeFromMyLibrary() {fetch(`/user_games/${gameData.id}`, {method: "DELETE"});}
+    function removeFromMyLibrary() {
+        fetch(`/user_games/${gameData.id}`, { method: "DELETE" });
+    }
 
     return (
         <div className="card">
             <div className="ui card">
                 <div className="image">
-                    <img src={gameData.image_url} alt={gameData.title}/>
+                    <img src={gameData.image_url} alt={gameData.title} />
                 </div>
                 <div className="content">
                     <p className="header">{gameData.title}</p>

@@ -18,6 +18,12 @@ function App() {
     setUser(copyOfUser)
   }
 
+  function removeGameFromFavorites (doomedGameID){
+    console.log('Ready to remove game with ID of', doomedGameID)
+  }
+
+  // pass function down to 
+
   useEffect(() => {
     fetch("/currentuser")
       .then((response) => {
