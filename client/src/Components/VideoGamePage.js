@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import GameCard from "./GameCard";
 import {Button} from "semantic-ui-react";
 
-function VideoGamePage({user, gameData}) {
+function VideoGamePage({user, gameData, addGameToFavorites}) {
    
-    const GameArrayMappedForCards = gameData.map((gameObj) => <GameCard user={user} key={gameObj.id} gameData={gameObj} />)
+    const GameArrayMappedForCards = gameData.map((gameObj) => <GameCard addGameToFavorites={addGameToFavorites} user={user} key={gameObj.id} gameData={gameObj} />)
     
     return (
         <>

@@ -10,6 +10,14 @@ function App() {
 
   const [user, setUser] = useState(false);
 
+  console.log(user)
+
+  function addGameToFavorites (favorite){
+    const copyOfUser = {...user}
+    copyOfUser.games = [...user.games, favorite.game]
+    setUser(copyOfUser)
+  }
+
   useEffect(() => {
     fetch("/currentuser")
       .then((response) => {
@@ -33,7 +41,7 @@ function App() {
         <Route path="/signup" element={<SignUp setUser={setUser}/>} />
         <Route path="/" element={<Homepage setUser={setUser} />}></Route>
         <Route path="/userpage" element={<Userpage user={user} setUser={setUser} />}/>
-        <Route path="/videogames" element={<VideoGamePage gameData={gameData} setGameData={setGameData} user={user}/>}/>
+        <Route path="/videogames" element={<VideoGamePage addGameToFavorites={addGameToFavorites} gameData={gameData} setGameData={setGameData} user={user}/>}/>
         <Route path="/newgameform" element={<GameFormPage setGameData={setGameData}/>}/>
       </Routes>
     </>

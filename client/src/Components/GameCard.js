@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function GameCard({ gameData, user }) {
+function GameCard({ gameData, user, addGameToFavorites }) {
 
     const clicked = () => { console.log('clicked') }
 
@@ -16,7 +16,7 @@ function GameCard({ gameData, user }) {
             }),
         }).then((response) => {
             if (response.ok) {
-                response.json().then(console.log('gotta add where this is going to be used in useEffect'));
+                response.json().then(addGameToFavorites);
             } else {
                 console.log('oh boy')
                 // add error handling here!

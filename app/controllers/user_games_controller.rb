@@ -8,7 +8,6 @@ class UserGamesController < ApplicationController
     end
 
     def destroy
-        params[:id]
         usergame = @current_user.user_games.find_by(game_id: params[:id])
         if usergame
             usergame.destroy
