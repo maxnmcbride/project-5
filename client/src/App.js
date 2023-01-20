@@ -20,9 +20,10 @@ function App() {
 
   function removeGameFromFavorites (doomedGameID){
     console.log('Ready to remove game with ID of', doomedGameID)
+    // const copyOfUser = {...user}
+    // copyOfUser.games = [...user.games, doomedGameID.game]
+    // setUser(copyOfUser)
   }
-
-  // pass function down to 
 
   useEffect(() => {
     fetch("/currentuser")
@@ -46,7 +47,7 @@ function App() {
       <Routes>
         <Route path="/signup" element={<SignUp setUser={setUser}/>} />
         <Route path="/" element={<Homepage setUser={setUser} />}></Route>
-        <Route path="/userpage" element={<Userpage user={user} setUser={setUser} />}/>
+        <Route path="/userpage" element={<Userpage removeGameFromFavorites={removeGameFromFavorites}  user={user} setUser={setUser} />}/>
         <Route path="/videogames" element={<VideoGamePage addGameToFavorites={addGameToFavorites} gameData={gameData} setGameData={setGameData} user={user}/>}/>
         <Route path="/newgameform" element={<GameFormPage setGameData={setGameData}/>}/>
       </Routes>
