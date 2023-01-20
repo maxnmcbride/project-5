@@ -2,7 +2,7 @@ function GameCardLibrary({ gameData, user, removeGameFromFavorites }) {
 
     const removeFromMyLibrary = () => {
         fetch(`/user_games/${gameData.id}`, { method: "DELETE" })
-        removeGameFromFavorites();
+        removeGameFromFavorites(gameData.id);
     }
 
     return (

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import {Button} from 'semantic-ui-react'
 
 function GameCard({ gameData, user, addGameToFavorites }) {
 

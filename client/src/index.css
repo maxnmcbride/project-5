@@ -89,6 +89,8 @@ code {
 
 #login{
   align-items: center;
+  max-width: 320px;
+  
 }
 
 #signUplink{

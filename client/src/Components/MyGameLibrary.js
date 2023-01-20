@@ -1,7 +1,7 @@
 import GameCardLibrary from "./GameCardLibrary";
 
 function MyGameLibrary({ user, removeGameFromFavorites }) {
-
+    
     const userGameData = user.games && user.games.map((userGameObj) => <GameCardLibrary removeGameFromFavorites={removeGameFromFavorites} key={userGameObj.id} gameData={userGameObj} />)
     //    const potato = userGameData && "meow"
     //    This is a shorthand for if/then statement i.e. if userGameData

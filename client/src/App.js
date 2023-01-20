@@ -10,8 +10,6 @@ function App() {
 
   const [user, setUser] = useState(false);
 
-  console.log(user)
-
   function addGameToFavorites (favorite){
     const copyOfUser = {...user}
     copyOfUser.games = [...user.games, favorite.game]
@@ -19,10 +17,16 @@ function App() {
   }
 
   function removeGameFromFavorites (doomedGameID){
+    // doomedGameID is being passed in the game card library, this could have been called anything
+    // this is inverse data flow
     console.log('Ready to remove game with ID of', doomedGameID)
-    // const copyOfUser = {...user}
-    // copyOfUser.games = [...user.games, doomedGameID.game]
-    // setUser(copyOfUser)
+    const copyOfUser = {...user}
+    copyOfUser.games = copyOfUser.games.filter((gameObj) => {
+      return gameObj.id !== doomedGameID
+    })
+    setUser(copyOfUser)
+    // filter takes callback function as argument
+    // this will pass the whole game as the argument
   }
 
   useEffect(() => {
