@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
-import MyGameLibrary from "./MyGameLibrary";
 import {Button} from "semantic-ui-react"
+import MyGameLibrary from "./MyGameLibrary";
 
 function Userpage({ user, setUser, removeGameFromFavorites }) {
 
@@ -20,6 +20,7 @@ function Userpage({ user, setUser, removeGameFromFavorites }) {
                 </ul>
             </nav>
             <h1 className="userpage_text">We're On {user.username}'s  User Page</h1>
+            <Button><Link to="/edituser">Edit My Profile</Link></Button>
             <div>
                 <MyGameLibrary user={user} removeGameFromFavorites={removeGameFromFavorites}/>
             </div>

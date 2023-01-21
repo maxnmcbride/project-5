@@ -1,4 +1,3 @@
-import { useState } from "react"
 import {Button} from 'semantic-ui-react'
 
 function GameCard({ gameData, user, addGameToFavorites }) {
@@ -33,7 +32,7 @@ function GameCard({ gameData, user, addGameToFavorites }) {
                 </div>
                 <div className="content">
                     <p onClick={clicked} className="header">{gameData.title}</p>
-                    <button onClick={addToMyLibrary} className="ui button">+ Add To My Library</button>
+                    <Button onClick={addToMyLibrary} className="ui button">+ Add To My Library</Button>
                 </div>
             </div>
         </div>
