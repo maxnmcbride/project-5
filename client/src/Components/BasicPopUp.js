@@ -1,4 +1,6 @@
-function BasicPopUp({ setBasicPopUp }) {
+function BasicPopUp({ setBasicPopUp, gameData, addToMyLibrary }) {
+
+    console.log(gameData)
 
     const closePopUp = () => {
         setBasicPopUp(false)
@@ -7,10 +9,22 @@ function BasicPopUp({ setBasicPopUp }) {
     return (
         <div id="overlay">
             <div id='popup-container'>
-                <h3>wassup?</h3>
                 <div id='content-container'>
-                    <button onClick={closePopUp}>X</button>
-                    <h1>Hello</h1>
+                    <h1>{gameData.title}</h1>
+                    <h3>Description:</h3>
+                    <p>{gameData.game_description}</p>
+                    <h3>Platform(s):</h3>
+                    <p>{gameData.platform}</p>
+                    <h3>Genre(s):</h3>
+                    <p>{gameData.genre}</p>
+                    <h3>Theme(s):</h3>
+                    <p>{gameData.theme}</p>
+                    <h3>Multiplayer:</h3>
+                    <p>{gameData.multiplayer}</p>
+                    <h3>Developer:</h3>
+                    <p>{gameData.developer}</p>
+                    <button onClick={closePopUp} className="ui button">Close</button>
+                    <button onClick={addToMyLibrary} className="ui button">+ Add To My Library</button>
                 </div>
             </div>
         </div>

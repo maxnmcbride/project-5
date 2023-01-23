@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import GameCard from "./GameCard";
-import {Button} from "semantic-ui-react";
 
 function VideoGamePage({user, gameData, addGameToFavorites}) {
    
@@ -10,9 +9,9 @@ function VideoGamePage({user, gameData, addGameToFavorites}) {
         <>
             <nav>
                 <ul>
-                    <Button><Link to="/">Home</Link></Button>
-                    <Button><Link to="/userpage">User Page</Link></Button>
-                    <Button><Link to="/newgameform">Add New Game</Link></Button>
+                    <button className="ui button"><Link to="/">Home</Link></button>
+                    <button className="ui button"><Link to="/userpage">User Page</Link></button>
+                    <button className="ui button"><Link to="/newgameform">Add New Game</Link></button>
                 </ul>
             </nav>
             <h1>We're on the Video Game Page</h1>

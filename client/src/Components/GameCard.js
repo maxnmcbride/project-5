@@ -1,8 +1,7 @@
-import { Button } from 'semantic-ui-react'
 import BasicPopUp from "./BasicPopUp";
 import { useState } from "react";
 
-function GameCard({ gameData, user, addGameToFavorites}) {
+function GameCard({ gameData, addGameToFavorites}) {
 
     const [basicPopUp, setBasicPopUp] = useState(false)
     
@@ -31,15 +30,11 @@ function GameCard({ gameData, user, addGameToFavorites}) {
 
     return (
         <div>
-            {basicPopUp ? <BasicPopUp basicPopUp={basicPopUp} setBasicPopUp={setBasicPopUp} /> : null}
+            {basicPopUp ? <BasicPopUp basicPopUp={basicPopUp} setBasicPopUp={setBasicPopUp} gameData={gameData} addToMyLibrary={addToMyLibrary}/> : null}
             <div className="card">
                 <div className="ui card">
                     <div onClick={openModal} className="image">
                         <img src={gameData.image_url} alt={gameData.title} />
-                    </div>
-                    <div className="content">
-                        <p onClick={openModal} className="header">{gameData.title}</p>
-                        <Button onClick={addToMyLibrary} className="ui button">+ Add To My Library</Button>
                     </div>
                 </div>
             </div>
