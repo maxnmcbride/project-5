@@ -18,7 +18,7 @@ function Userpage({ user, setUser, removeGameFromFavorites }) {
                     <button className="ui button"><Link to="/videogames">Video Games</Link></button>
                 </ul>
             </nav>
-            <h1 className="userpage_text">We're On {user.username}'s  User Page</h1>
+            <h1 className="userpage_text">Welcome, {user.username}!</h1>
             <button className="ui button"><Link to="/edituser">Edit My Profile</Link></button>
             <div>
                 <MyGameLibrary user={user} removeGameFromFavorites={removeGameFromFavorites} />

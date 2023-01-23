@@ -16,7 +16,7 @@ function VideoGamePage({user, gameData, addGameToFavorites}) {
             </nav>
             <h1>We're on the Video Game Page</h1>
             <div>
-                <div>
+                <div className="card_container">
                     {GameArrayMappedForCards}
                 </div>
             </div>

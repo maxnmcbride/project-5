@@ -31,21 +31,38 @@ code {
 #userpage{  
   background-color: blueviolet;
   background: url("/Users/max/Desktop/project-5/client/src/Components/images/finalprofilearcade.gif") no-repeat center center fixed;
-  /* -webkit-background-size: cover;
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; */
+  background-size: cover;
+  height: 100vh;
   top: 0;
   left: 0;
-  height: 100vh;
-  border: 1px solid red;
 }
 
 .card {
   position: relative;
   text-align: center;
-  display: inline-flex;
+  display: flex;
   margin: 10px;
+  max-width: 15rem;
+}
+
+.card_container{
+  height: 80vh;
+  width: cover;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+#card_container_userpage{
+  height: 80vh;
+  width: cover;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #signuppage {
@@ -128,11 +145,11 @@ code {
   z-index: 15;
 }
 
-/* #content-container {
-  position: absolute;
+#modal_on_page{
   top: 0;
-  justify-content: center;
-} */
+  left: 0;
+  position: absolute;
+}
 
 #popup-container {
   background-color: aquamarine;
@@ -140,18 +157,8 @@ code {
   justify-content: center;
   align-items: center;
   margin-top: 10%;
-  margin-left: 10em;
-  width: 50em;
-  padding: 5em;
-  border-radius: 1em;
+  margin-left: 25%;
+  width: 50%;
+  padding: 3em;
+  border-radius: 2em;
 } 
-
-.videogamepagebg{
-  background-color: blueviolet;
-  background: url("/Users/max/Desktop/project-5/client/src/Components/images/userpagemock.png") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100vh
-}

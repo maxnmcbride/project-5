@@ -13,7 +13,7 @@ function MyGameLibrary({ user, removeGameFromFavorites }) {
 
     // 
     return (
-        <div>
+        <div id="card_container_userpage">
             {userGameData}
         </div>
     );

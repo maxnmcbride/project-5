@@ -1,11 +1,11 @@
 import BasicPopUp from "./BasicPopUp";
 import { useState } from "react";
 
-function GameCard({ gameData, addGameToFavorites}) {
+function GameCard({ gameData, addGameToFavorites }) {
 
     const [basicPopUp, setBasicPopUp] = useState(false)
-    
-    const openModal = () => {        
+
+    const openModal = () => {
         setBasicPopUp(true)
     };
 
@@ -30,7 +30,9 @@ function GameCard({ gameData, addGameToFavorites}) {
 
     return (
         <div>
-            {basicPopUp ? <BasicPopUp basicPopUp={basicPopUp} setBasicPopUp={setBasicPopUp} gameData={gameData} addToMyLibrary={addToMyLibrary}/> : null}
+            <div id="modal_on_page">
+            {basicPopUp ? <BasicPopUp basicPopUp={basicPopUp} setBasicPopUp={setBasicPopUp} gameData={gameData} addToMyLibrary={addToMyLibrary} /> : null}
+            </div>
             <div className="card">
                 <div className="ui card">
                     <div onClick={openModal} className="image">
