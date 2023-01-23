@@ -1,9 +1,14 @@
-import {Button} from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
+import BasicPopUp from "./BasicPopUp";
+import { useState } from "react";
 
-function GameCard({ gameData, user, addGameToFavorites }) {
+function GameCard({ gameData, user, addGameToFavorites}) {
 
-    const clicked = () => { console.log('clicked') }
-
+    const [basicPopUp, setBasicPopUp] = useState(false)
+    
+    const openModal = () => {        
+        setBasicPopUp(true)
+    };
 
     function addToMyLibrary() {
         fetch("/user_games", {
@@ -25,14 +30,17 @@ function GameCard({ gameData, user, addGameToFavorites }) {
     }
 
     return (
-        <div className="card">
-            <div className="ui card">
-                <div onClick={clicked} className="image">
-                    <img src={gameData.image_url} alt={gameData.title} />
-                </div>
-                <div className="content">
-                    <p onClick={clicked} className="header">{gameData.title}</p>
-                    <Button onClick={addToMyLibrary} className="ui button">+ Add To My Library</Button>
+        <div>
+            {basicPopUp ? <BasicPopUp basicPopUp={basicPopUp} setBasicPopUp={setBasicPopUp} /> : null}
+            <div className="card">
+                <div className="ui card">
+                    <div onClick={openModal} className="image">
+                        <img src={gameData.image_url} alt={gameData.title} />
+                    </div>
+                    <div className="content">
+                        <p onClick={openModal} className="header">{gameData.title}</p>
+                        <Button onClick={addToMyLibrary} className="ui button">+ Add To My Library</Button>
+                    </div>
                 </div>
             </div>
         </div>

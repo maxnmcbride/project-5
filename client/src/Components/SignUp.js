@@ -45,7 +45,7 @@ function SignUp({ setUser }) {
                 </ul>
             </nav>
             <div>
-                <Form onSubmit={handleSubmit}>
+                <Form onSubmit={handleSubmit} id="signupform">
                     <Form.Field>
                         <label id="signup_form" htmlFor="username">
                             Username:
