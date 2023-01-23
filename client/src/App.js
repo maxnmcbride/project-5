@@ -42,6 +42,7 @@ function App() {
   }, []);
 
   const [gameData, setGameData] = useState([])
+  // if rerender stops working use a rerender state passed in array
 
   useEffect(() => {
     fetch('/games')
@@ -56,7 +57,7 @@ function App() {
         <Route path="/" element={<Homepage setUser={setUser} />}></Route>
         <Route path="/userpage" element={<Userpage removeGameFromFavorites={removeGameFromFavorites} user={user} setUser={setUser} />} />
         <Route path="/videogames" element={<VideoGamePage addGameToFavorites={addGameToFavorites} gameData={gameData} setGameData={setGameData} user={user} />} />
-        <Route path="/newgameform" element={<GameFormPage setGameData={setGameData} />} />
+        <Route path="/newgameform" element={<GameFormPage gameData={gameData} setGameData={setGameData} />} />
         <Route path="/edituser" element={<UserEditForm user={user} setUser={setUser} />} />
       </Routes>
     </>
