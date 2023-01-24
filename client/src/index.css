@@ -27,11 +27,10 @@ code {
   -o-background-size: cover;
   background-size: contain;
   background-repeat: repeat-x;
-  /* background-repeat: repeat-y; */
   height: 100vh;
 }
 
-@media screen and (max-width: 1198px) {
+@media screen and (max-width: 1286px) {
   #homepage {
     background-color: blueviolet;
     background: url("/Users/max/Desktop/project-5/client/src/Components/images/resized-homepage-bg.png")no-repeat left center fixed;
@@ -55,6 +54,7 @@ code {
   position: absolute; */
   margin-top: 8%;
   margin-left: 10%;
+  bottom: 0;
 }
 
 #login{
@@ -73,16 +73,41 @@ code {
   right: 100px; */
 }
 
-#userpage{  
+#userpage {
   background-color: blueviolet;
-  background: url("/Users/max/Desktop/project-5/client/src/Components/images/finalprofilearcade.gif") no-repeat center center fixed;
+  background: url("/Users/max/Desktop/project-5/client/src/Components/images/userpage-bg.png")left center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: repeat-x;
   height: 100vh;
-  top: 0;
-  left: 0;
+}
+
+@media screen and (max-width: 1286px) {
+  #userpage {
+    background-color: blueviolet;
+    background: url("/Users/max/Desktop/project-5/client/src/Components/images/userpage-bg.png")left center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+#userpage-fg{
+  background: url("/Users/max/Desktop/project-5/client/src/Components/images/userpage-fg.gif") no-repeat center center;
+  height: 80%;
+  width: 80%;
+  background-size: contain;
+  /* object-fit: contain; */
+  border: 10px solid red;
+  /* bottom: 50px;
+  position: absolute; */
+  margin-top: 8%;
+  margin-left: 10%;
+  bottom: 0;
 }
 
 .card {

@@ -7,7 +7,7 @@ function BasicPopUp({ setBasicPopUp, gameData, addToMyLibrary }) {
     };
 
     return (
-        <div id="overlay">
+        <div id="overlay" onClick={closePopUp}>
             <div id='popup-container'>
                 <div id='content-container'>
                     <h1>{gameData.title}</h1>

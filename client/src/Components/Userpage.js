@@ -22,9 +22,11 @@ function Userpage({ user, setUser, removeGameFromFavorites }) {
                 </ul>
             </nav>
             {userAsync}
-            <button className="ui button"><Link to="/edituser">Edit My Profile</Link></button>
-            <div>
-                <MyGameLibrary user={user} removeGameFromFavorites={removeGameFromFavorites} />
+                <button className="ui button"><Link to="/edituser">Edit My Profile</Link></button>
+            <div id="userpage-fg">
+                <div>
+                    <MyGameLibrary user={user} removeGameFromFavorites={removeGameFromFavorites} />
+                </div>
             </div>
         </div>
     );
