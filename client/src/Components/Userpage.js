@@ -3,6 +3,10 @@ import MyGameLibrary from "./MyGameLibrary";
 
 function Userpage({ user, setUser, removeGameFromFavorites }) {
 
+
+    // const libraryMessage = (user.games.length === 1) ? <h2>There is 1 game in your library</h2> : <h2>There are {user.games.length} games in your library</h2>
+
+
     const navigate = useNavigate();
     const handleLogOut = () => {
         fetch("/logout", { method: 'DELETE' })
@@ -18,7 +22,7 @@ function Userpage({ user, setUser, removeGameFromFavorites }) {
                     <button className="ui button"><Link to="/videogames">Video Games</Link></button>
                 </ul>
             </nav>
-            <h1 className="userpage_text">Welcome, {user.username}!</h1>
+            {/* <h2>WELCOME, {user.username.toUpperCase()}!</h2> */}
             <button className="ui button"><Link to="/edituser">Edit My Profile</Link></button>
             <div>
                 <MyGameLibrary user={user} removeGameFromFavorites={removeGameFromFavorites} />

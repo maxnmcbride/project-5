@@ -11,8 +11,6 @@ function App() {
 
   const [user, setUser] = useState(false);
 
-  console.log(user)
-
   function addGameToFavorites(favorite) {
     const copyOfUser = { ...user }
     copyOfUser.games = [...user.games, favorite.game]
