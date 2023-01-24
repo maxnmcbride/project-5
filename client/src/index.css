@@ -48,10 +48,7 @@ code {
   height: 80%;
   width: 80%;
   background-size: contain;
-  /* object-fit: contain; */
   border: 10px solid red;
-  /* bottom: 50px;
-  position: absolute; */
   margin-top: 8%;
   margin-left: 10%;
   bottom: 0;
@@ -97,17 +94,7 @@ code {
 }
 
 #userpage-fg{
-  background: url("/Users/max/Desktop/project-5/client/src/Components/images/userpage-fg.gif") no-repeat center center;
-  height: 80%;
-  width: 80%;
-  background-size: contain;
-  /* object-fit: contain; */
-  border: 10px solid red;
-  /* bottom: 50px;
-  position: absolute; */
-  margin-top: 8%;
-  margin-left: 10%;
-  bottom: 0;
+  background: url("/Users/max/Desktop/project-5/client/src/Components/images/userpage-fg.gif") repeat center top;
 }
 
 .card {
