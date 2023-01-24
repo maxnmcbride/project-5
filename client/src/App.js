@@ -39,14 +39,21 @@ function App() {
       });
   }, []);
 
-  const [gameData, setGameData] = useState([])
+  const [gameData, setGameData] = useState(null)
   // if rerender stops working use a rerender state passed in array
 
   useEffect(() => {
     fetch('/games')
       .then((response) => response.json())
-      .then(setGameData)
-  }, [])
+      .then((data)=>{setGameData(data)})
+    }, [])
+  //       if (data["errors"]){
+  //         alert(JSON.stringify(data))
+  //       } else {
+  //         setGameData(data)
+  //       }
+  //     })
+  // }, [])
 
   return (
     <>

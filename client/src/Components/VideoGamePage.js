@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import GameCard from "./GameCard";
 
 function VideoGamePage({user, gameData, addGameToFavorites}) {
+    // gameData = []
    
     const GameArrayMappedForCards = gameData.map((gameObj) => <GameCard  addGameToFavorites={addGameToFavorites} user={user} key={gameObj.id} gameData={gameObj}/>)
     

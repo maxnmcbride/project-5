@@ -18,14 +18,59 @@ code {
     monospace;
 }
 
+/* Wallpaper */
 #homepage {
   background-color: blueviolet;
-  background: url("./gamecafe.gif") no-repeat center center fixed;
+  background: url("/Users/max/Desktop/project-5/client/src/Components/images/resized-homepage-bg.png")left center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: repeat-x;
+  /* background-repeat: repeat-y; */
   height: 100vh;
+}
+
+@media screen and (max-width: 1198px) {
+  #homepage {
+    background-color: blueviolet;
+    background: url("/Users/max/Desktop/project-5/client/src/Components/images/resized-homepage-bg.png")no-repeat left center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+/* TV */
+#homepage-fg{
+  background: url("/Users/max/Desktop/project-5/client/src/Components/images/rezised-homepage-fg.gif") no-repeat center center;
+  height: 80%;
+  width: 80%;
+  background-size: contain;
+  /* object-fit: contain; */
+  border: 10px solid red;
+  /* bottom: 50px;
+  position: absolute; */
+  margin-top: 8%;
+  margin-left: 10%;
+}
+
+#login{
+  align-items: center;
+  min-width: 300px;
+  max-width: 300px;
+  /* position fixed look into this */
+}
+
+#homepage_login{
+  justify-content: center;
+  position: absolute;
+  top: 29%;
+  left: 35%;
+  /* left: 100px;
+  right: 100px; */
 }
 
 #userpage{  
@@ -111,12 +156,6 @@ code {
   font-family: 'Callie Chalk Font', sans-serif;
 }
 
-#login{
-  align-items: center;
-  min-width: 320px;
-  max-width: 320px;
-  /* position fixed look into this */
-}
 
 #signupform{
   margin-top: 25px;
@@ -129,11 +168,6 @@ code {
 
 #signUplink{
   margin-top: 2px;
-}
-
-#homepage_login{
-  margin-top: 8rem;
-  padding: 15rem;
 }
 
 #overlay{

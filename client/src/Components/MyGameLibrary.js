@@ -6,12 +6,10 @@ function MyGameLibrary({ user, removeGameFromFavorites }) {
     //    const potato = userGameData && "meow"
     //    This is a shorthand for if/then statement i.e. if userGameData
     //    if (userGameData){
-    //    This is working because the useEffect in amp is finally firing off
+    //    This is working because the useEffect in app is finally firing off
     //     userGameData.map((userGameObj) => {console.log(userGameObj)})
     //    }
-    //    console.log(userGameData)
-
-    // 
+    //    console.log(userGameData) 
     return (
         <div id="card_container_userpage">
             {userGameData}
