@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import { Button, Form } from 'semantic-ui-react'
 
@@ -51,6 +51,7 @@ function Login({ setUser }) {
                         onChange={(e) => setPassword(e.target.value)} />
                 </Form.Field>
                 <Button type="submit">Log In</Button>
+                <Button id="signUplink"><Link to="/signup">Sign Up</Link></Button>
             </Form>
         </div>
     );

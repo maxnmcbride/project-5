@@ -45,13 +45,13 @@ code {
 /* TV */
 #homepage-fg{
   background: url("/Users/max/Desktop/project-5/client/src/Components/images/rezised-homepage-fg.gif") no-repeat center center;
-  height: 80%;
-  width: 80%;
+  height: 90%;
+  width: 90%;
   background-size: contain;
-  border: 10px solid red;
-  margin-top: 8%;
-  margin-left: 10%;
+  margin-top: 3%;
+  margin-left: 5%;
   bottom: 0;
+  position: fixed;
 }
 
 #login{
@@ -64,8 +64,8 @@ code {
 #homepage_login{
   justify-content: center;
   position: fixed;
-  top: 29%;
-  left: 35%;
+  top: 32%;
+  left: 40%;
   /* left: 100px;
   right: 100px; */
 }
@@ -128,7 +128,7 @@ code {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: contain;
   height: 100vh;
 }
 
