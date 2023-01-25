@@ -21,7 +21,7 @@ code {
 /* Wallpaper */
 #homepage {
   background-color: blueviolet;
-  background: url("/Users/max/Desktop/project-5/client/src/Components/images/resized-homepage-bg.png")left center fixed;
+  background: url("/Users/max/Desktop/project-5/client/src/Components/images/resized-homepage-bg.png")center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -33,7 +33,7 @@ code {
 @media screen and (max-width: 1286px) {
   #homepage {
     background-color: blueviolet;
-    background: url("/Users/max/Desktop/project-5/client/src/Components/images/resized-homepage-bg.png")no-repeat left center fixed;
+    background: url("/Users/max/Desktop/project-5/client/src/Components/images/resized-homepage-bg.png")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -63,7 +63,7 @@ code {
 
 #homepage_login{
   justify-content: center;
-  position: absolute;
+  position: fixed;
   top: 29%;
   left: 35%;
   /* left: 100px;
@@ -208,3 +208,13 @@ code {
   padding: 3em;
   border-radius: 2em;
 } 
+
+#videogamepagebg{
+  background-color: blueviolet;
+  background: url("/Users/max/Desktop/project-5/client/src/Components/images/coffeepour.gif")no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+}

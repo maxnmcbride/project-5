@@ -7,7 +7,7 @@ function VideoGamePage({user, gameData, addGameToFavorites}) {
     const GameArrayMappedForCards = gameData.map((gameObj) => <GameCard  addGameToFavorites={addGameToFavorites} user={user} key={gameObj.id} gameData={gameObj}/>)
     
     return (
-        <div className="videogamepagebg">
+        <div id="videogamepagebg">
             <nav>
                 <ul>
                     <button className="ui button"><Link to="/">Home</Link></button>

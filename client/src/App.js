@@ -39,7 +39,7 @@ function App() {
       });
   }, []);
 
-  const [gameData, setGameData] = useState(null)
+  const [gameData, setGameData] = useState([])
   // if rerender stops working use a rerender state passed in array
 
   useEffect(() => {
