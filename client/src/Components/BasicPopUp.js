@@ -23,6 +23,8 @@ function BasicPopUp({ setBasicPopUp, gameData, addToMyLibrary }) {
                     <p>{gameData.multiplayer}</p>
                     <h3>Developer:</h3>
                     <p>{gameData.developer}</p>
+                    <h3>Release Date:</h3>
+                    <p>{gameData.release_date}</p>
                     <button onClick={closePopUp} className="ui button">Close</button>
                     <button onClick={addToMyLibrary} className="ui button">+ Add To My Library</button>
                 </div>
