@@ -4,7 +4,7 @@ import { useState } from "react";
 function GameCard({ gameData, addGameToFavorites }) {
 
     const [basicPopUp, setBasicPopUp] = useState(false)
-    
+
     // const [isDisabled, setIsDisabled] = useState(false)
 
     // const handleDisabled = () => {
@@ -29,8 +29,7 @@ function GameCard({ gameData, addGameToFavorites }) {
             if (response.ok) {
                 response.json().then(addGameToFavorites);
             } else {
-                console.log('oh boy')
-                // add error handling here!
+                response.json().then(console.warn);
             }
         });
     }
@@ -38,7 +37,7 @@ function GameCard({ gameData, addGameToFavorites }) {
     return (
         <div>
             <div id="modal_on_page">
-            {basicPopUp ? <BasicPopUp basicPopUp={basicPopUp} setBasicPopUp={setBasicPopUp} gameData={gameData} addToMyLibrary={addToMyLibrary} /> : null}
+                {basicPopUp ? <BasicPopUp basicPopUp={basicPopUp} setBasicPopUp={setBasicPopUp} gameData={gameData} addToMyLibrary={addToMyLibrary} /> : null}
             </div>
             <div className="card">
                 <div className="ui card">

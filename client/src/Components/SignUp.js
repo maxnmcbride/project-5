@@ -37,11 +37,10 @@ function SignUp({ setUser }) {
 
     return (
         <div id="signuppage">
-            <nav>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/userpage">User Page</Link></li>
-                    <li><Link to="/videogames">Video Games</Link></li>
+            <nav id="signup_nav">
+                <ul id="signup_ul_nav">
+                    <button className="ui button"><Link to="/userpage">User Page</Link></button>
+                    <button className="ui button"><Link to="/videogames">Video Games</Link></button>
                 </ul>
             </nav>
             <div>

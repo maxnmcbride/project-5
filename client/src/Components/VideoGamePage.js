@@ -8,14 +8,13 @@ function VideoGamePage({user, gameData, addGameToFavorites}) {
     
     return (
         <div id="videogamepagebg">
-            <nav>
-                <ul>
-                    <button className="ui button"><Link to="/">Home</Link></button>
+            <nav id="signup_nav">
+                <ul id="signup_ul_nav">
                     <button className="ui button"><Link to="/userpage">User Page</Link></button>
                     <button className="ui button"><Link to="/newgameform">Add New Game</Link></button>
                 </ul>
             </nav>
-            <h1>We're on the Video Game Page</h1>
+            <h1 id="signup_header">We're on the Video Game Page</h1>
             <div>
                 <div className="card_container">
                     {GameArrayMappedForCards}
