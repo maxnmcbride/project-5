@@ -303,4 +303,16 @@ code {
 
 #edit-userpage-form{
   width: 25rem;
+  padding-top: 1rem;
+}
+
+#username_update_header{
+  text-align: center;
+  font-size: 3rem;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-weight: bold;
+}
+
+#edit_user_container{
+  padding-left:15rem;
 }

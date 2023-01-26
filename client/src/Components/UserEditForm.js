@@ -34,10 +34,10 @@ function UserEditForm({ user, setUser }) {
                 </ul>
             </nav>
             <h1 id="edit_userpage_header">Update User Preferences</h1>
-            <div>
+            <div id="edit_user_container">
+                <label htmlFor="username" id="username_update_header"> Username: </label>
                 <Form id="edit-userpage-form" onSubmit={handleSubmit} >
                     <Form.Field>
-                        <label htmlFor="username"> Username: </label>
                         <input
                             type="text"
                             id="username"
