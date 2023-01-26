@@ -48,8 +48,8 @@ function NewGameForm({ gameData, setGameData }) {
 
     return (
         <div>
-            <p id="newgameformdescription">If you didn't see the video game you were looking for in our growing public catalog please help us out by adding it! Note: This is being input directly into our database! As such, we ask that you follow naming conventions as closely as possible.</p>
             <Form id="newgameform" onSubmit={handleSubmit}>
+                <p id="newgameformdescription">If you didn't see the video game you were looking for in our growing public catalog please help us out by adding it! Note: This is being input directly into our database! As such, we ask that you follow naming conventions as closely as possible.</p>
                 <label className='newgamelabeltext'>Title</label>
                 <Form.Field
                     id='form-input-control-game-title'
@@ -118,12 +118,12 @@ function NewGameForm({ gameData, setGameData }) {
                 <Form.Group grouped>
                     <Form.Field
                         id='form-input-control-multiplayer'
-                        label='True'
                         control='input'
                         type='checkbox'
                         value={multiplayer}
                         onChange={() => setMultiplayer(!multiplayer)} />
                 </Form.Group>
+                    <label className='newgamelabeltext'>True</label>
                 <Form.Button type='submit'>Submit New Game</Form.Button>
             </Form>
         </div>

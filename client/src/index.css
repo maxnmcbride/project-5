@@ -147,6 +147,8 @@ code {
 
 #newgameformdescription{
   color:white;
+  justify-content: center;
+  font-size: medium;
 }
 
 .newgamelabeltext{
@@ -245,7 +247,7 @@ code {
   text-align: right;
 }
 
-/* #signup_nav{
+ #newgame_nav{
   color: white;
   justify-content: space-between;
   align-items: stretch;
@@ -253,10 +255,28 @@ code {
   padding: 10px 10px;
 }
 
-#signup_ul_nav{
+#newgame_ul_nav{
   text-align: right;
-} */
+}
 
-#signup_header{
+#game_catalog{
   text-align: center;
+  font-size: 5rem;
+  background-color: blanchedalmond;
+  width:fit-content;
+  border-radius: 1rem;
+  margin-left: 38%;
+  padding: 1rem;
+}
+
+#gamepage_nav{
+  color: white;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 10px 10px;
+}
+
+#gamepage_ul_nav{
+  text-align: right;
 }
