@@ -112,6 +112,7 @@ code {
   display: flex;
   flex-wrap: wrap;
   padding: 2rem;
+  justify-content: center;
 }
 
 #card_container_userpage{
@@ -120,6 +121,8 @@ code {
   overflow-y: scroll;
   display: flex;
   flex-wrap: wrap;
+  padding: 2rem;
+  justify-content: center;
 }
 
 #signuppage {
@@ -167,7 +170,6 @@ code {
   color:white;
   font-family: 'Callie Chalk Font', sans-serif;
 }
-
 
 #signupform{
   margin-top: 7%;
@@ -242,7 +244,7 @@ code {
   text-align: right;
 }
 
-#signup_nav{
+/* #signup_nav{
   color: white;
   justify-content: space-between;
   align-items: stretch;
@@ -252,7 +254,7 @@ code {
 
 #signup_ul_nav{
   text-align: right;
-}
+} */
 
 #signup_header{
   text-align: center;

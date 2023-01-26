@@ -39,8 +39,7 @@ function SignUp({ setUser }) {
         <div id="signuppage">
             <nav id="signup_nav">
                 <ul id="signup_ul_nav">
-                    <button className="ui button"><Link to="/userpage">User Page</Link></button>
-                    <button className="ui button"><Link to="/videogames">Video Games</Link></button>
+                    <button className="ui button"><Link to="/">Home</Link></button>
                 </ul>
             </nav>
             <div>
