@@ -43,7 +43,7 @@ code {
 }
 
 /* TV */
-#homepage-fg{
+#homepage-fg {
   background: url("/Users/max/Desktop/project-5/client/src/Components/images/rezised-homepage-fg.gif") no-repeat center center;
   height: 90%;
   width: 90%;
@@ -54,14 +54,12 @@ code {
   position: fixed;
 }
 
-#login{
+#login {
   align-items: center;
-  min-width: 300px;
-  max-width: 300px;
-  /* position fixed look into this */
+  width: 290px;
 }
 
-#homepage_login{
+#homepage_login {
   justify-content: center;
   position: fixed;
   top: 32%;
@@ -93,7 +91,7 @@ code {
   }
 }
 
-#userpage-fg{
+#userpage-fg {
   background: url("/Users/max/Desktop/project-5/client/src/Components/images/userpage-fg.gif") repeat center top;
 }
 
@@ -105,7 +103,7 @@ code {
   max-width: 15rem;
 }
 
-.card_container{
+.card_container {
   height: 80vh;
   width: cover;
   overflow-y: scroll;
@@ -115,7 +113,7 @@ code {
   justify-content: center;
 }
 
-#card_container_userpage{
+#card_container_userpage {
   height: 80vh;
   width: cover;
   overflow-y: scroll;
@@ -135,7 +133,7 @@ code {
   height: 100vh;
 }
 
-#gameformpage{
+#gameformpage {
   background-color: blueviolet;
   background: url("/Users/max/Desktop/project-5/client/src/Components/images/aliencoffee.gif") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -145,36 +143,36 @@ code {
   height: 100vh;
 }
 
-#newgameformdescription{
-  color:white;
+#newgameformdescription {
+  color: white;
   justify-content: center;
   font-size: medium;
 }
 
-.newgamelabeltext{
-  color:white;
+.newgamelabeltext {
+  color: white;
   font-size: 2rem;
   font-family: 'SpaceType', sans-serif;
 }
 
-.userpage_text{
-  color:white;
+.userpage_text {
+  color: white;
   font-size: 2rem;
   font-family: 'SpaceType', sans-serif;
 }
 
-#newgameform{
+#newgameform {
   width: 50%;
   align-items: center;
   margin-left: 5rem;
 }
 
-#signup_form{
-  color:white;
+#signup_form {
+  color: white;
   font-family: 'Callie Chalk Font', sans-serif;
 }
 
-#signupform{
+#signupform {
   margin-top: 7%;
   left: 42%;
   align-items: center;
@@ -182,11 +180,12 @@ code {
   max-width: 400px;
 }
 
-#signUplink{
+#signUplink {
   margin-top: 2px;
+  margin-left: 8rem;
 }
 
-#overlay{
+#overlay {
   background-color: rgba(0, 0, 0, 0.425);
   position: absolute;
   height: 100vh;
@@ -195,7 +194,7 @@ code {
   z-index: 15;
 }
 
-#modal_on_page{
+#modal_on_page {
   top: 0;
   left: 0;
   position: absolute;
@@ -211,9 +210,9 @@ code {
   width: 50%;
   padding: 3em;
   border-radius: 2em;
-} 
+}
 
-#videogamepagebg{
+#videogamepagebg {
   background-color: blueviolet;
   background: url("/Users/max/Desktop/project-5/client/src/Components/images/coffeepour.gif")no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -223,7 +222,7 @@ code {
   min-height: 100vh;
 }
 
-#signup_nav{
+#signup_nav {
   color: white;
   justify-content: space-between;
   align-items: stretch;
@@ -231,11 +230,11 @@ code {
   padding: 10px 10px;
 }
 
-#signup_ul_nav{
+#signup_ul_nav {
   text-align: right;
 }
 
-#userpage_nav{
+#userpage_nav {
   color: white;
   justify-content: space-between;
   align-items: stretch;
@@ -243,11 +242,11 @@ code {
   padding: 10px 10px;
 }
 
-#userpage_ul_nav{
+#userpage_ul_nav {
   text-align: right;
 }
 
- #newgame_nav{
+#newgame_nav {
   color: white;
   justify-content: space-between;
   align-items: stretch;
@@ -255,31 +254,31 @@ code {
   padding: 10px 10px;
 }
 
-#newgame_ul_nav{
+#newgame_ul_nav {
   text-align: right;
 }
 
-#game_catalog{
+#game_catalog {
   text-align: center;
   font-size: 5rem;
   background-color: blanchedalmond;
-  width:fit-content;
+  width: fit-content;
   border-radius: 1rem;
   margin-left: 38%;
   padding: 1rem;
 }
 
-#edit_userpage_header{
+#edit_userpage_header {
   text-align: center;
   font-size: 3rem;
   background-color: teal;
-  width:fit-content;
+  width: fit-content;
   border-radius: 1rem;
   margin-left: 37%;
   padding: 1rem;
 }
 
-#gamepage_nav{
+#gamepage_nav {
   color: white;
   justify-content: space-between;
   align-items: stretch;
@@ -287,11 +286,11 @@ code {
   padding: 10px 10px;
 }
 
-#gamepage_ul_nav{
+#gamepage_ul_nav {
   text-align: right;
 }
 
-#editUserpage{
+#editUserpage {
   background-color: blueviolet;
   background: url("/Users/max/Desktop/project-5/client/src/Components/images/Reese_wagging.gif")center center fixed;
   -webkit-background-size: cover;
@@ -301,25 +300,25 @@ code {
   height: 100vh;
 }
 
-#edit-userpage-form{
+#edit-userpage-form {
   width: 25rem;
   padding-top: 1rem;
 }
 
-#username_update_header{
+#username_update_header {
   text-align: center;
   font-size: 3rem;
-  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
-#userpage_heading{
+#userpage_heading {
   text-align: center;
   font-size: 2rem;
-  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
-#edit_user_container{
-  padding-left:15rem;
+#edit_user_container {
+  padding-left: 15rem;
 }
