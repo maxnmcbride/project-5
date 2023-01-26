@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button, Form } from "semantic-ui-react"
 import { useState } from "react";
 
-function UserEditForm({user, setUser}) {
+function UserEditForm({ user, setUser }) {
 
     const [username, setUsername] = useState("");
-    const handleSubmit = (e) =>{
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
         console.log('submit button active')
         e.preventDefault()
         fetch(`/users/${user.id}`,
@@ -17,32 +19,34 @@ function UserEditForm({user, setUser}) {
                 })
             })
             .then(r => r.json())
-            .then(setUser)
+            .then((user) => {
+                setUser(user)
+                alert("You successfully updated your username!")
+                navigate("/userpage")
+            });
     }
 
     return (
-        <div>
-            <nav>
-                <ul>
-                    <li><Link to="/userpage">User Page</Link></li>
+        <div id="editUserpage">
+            <nav id="signup_nav">
+                <ul id="signup_ul_nav">
+                    <button className="ui button"><Link to="/userpage">User Page</Link></button>
                 </ul>
             </nav>
-            <h1>Welcome! On This Page You Can Update Your Username</h1>
+            <h1 id="edit_userpage_header">Update User Preferences</h1>
             <div>
-                <Form onSubmit = {handleSubmit} >
+                <Form id="edit-userpage-form" onSubmit={handleSubmit} >
                     <Form.Field>
-                        <label htmlFor="username">
-                            Username:
-                            <input
-                                type="text"
-                                id="username"
-                                autoComplete="off"
-                                placeholder="Please Enter Your Preferred Username"
-                                value={username}
-                                onChange={(e) => {setUsername(e.target.value)}} />
-                        </label>
+                        <label htmlFor="username"> Username: </label>
+                        <input
+                            type="text"
+                            id="username"
+                            autoComplete="off"
+                            placeholder="Please Enter Your Preferred Username"
+                            value={username}
+                            onChange={(e) => { setUsername(e.target.value) }} />
                     </Form.Field>
-                    <Button type="submit">Update Preferences</Button>
+                    <button className="ui button" type="submit">Update Preferences</button>
                 </Form>
             </div>
         </div>

@@ -269,6 +269,16 @@ code {
   padding: 1rem;
 }
 
+#edit_userpage_header{
+  text-align: center;
+  font-size: 3rem;
+  background-color: teal;
+  width:fit-content;
+  border-radius: 1rem;
+  margin-left: 37%;
+  padding: 1rem;
+}
+
 #gamepage_nav{
   color: white;
   justify-content: space-between;
@@ -279,4 +289,18 @@ code {
 
 #gamepage_ul_nav{
   text-align: right;
+}
+
+#editUserpage{
+  background-color: blueviolet;
+  background: url("/Users/max/Desktop/project-5/client/src/Components/images/Reese_wagging.gif")center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
+
+#edit-userpage-form{
+  width: 25rem;
 }
