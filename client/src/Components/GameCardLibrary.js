@@ -13,7 +13,6 @@ function GameCardLibrary({ gameData, user, removeGameFromFavorites }) {
                         <img src={gameData.image_url} alt={gameData.title} />
                     </div>
                     <div className="content">
-                        <p className="header">{gameData.title}</p>
                         <button className="ui button" onClick={removeFromMyLibrary}>- Remove From My Library</button>
                     </div>
                 </div>
