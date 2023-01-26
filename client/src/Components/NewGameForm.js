@@ -48,8 +48,7 @@ function NewGameForm({ gameData, setGameData }) {
 
     return (
         <div>
-            <h1 id="newgameformdescription">New Game Form</h1>
-            <p id="newgameformdescription">If you don't see the video game you are looking for in our growing public catalog please help us out by adding it! Please note that this is being input directly into our database as such, we ask that you follow naming conventions as closely as possible.</p>
+            <p id="newgameformdescription">If you didn't see the video game you were looking for in our growing public catalog please help us out by adding it! Note: This is being input directly into our database! As such, we ask that you follow naming conventions as closely as possible.</p>
             <Form id="newgameform" onSubmit={handleSubmit}>
                 <label className='newgamelabeltext'>Title</label>
                 <Form.Field

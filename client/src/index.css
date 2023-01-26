@@ -164,6 +164,7 @@ code {
 #newgameform{
   width: 50%;
   align-items: center;
+  margin-left: 5rem;
 }
 
 #signup_form{
