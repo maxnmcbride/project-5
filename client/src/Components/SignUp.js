@@ -29,8 +29,7 @@ function SignUp({ setUser }) {
                     navigate("/userpage")
                 });
             } else {
-                response.json().then()
-                // NEED TO ADD ERROR HANDLING 
+                response.json().then(alert("Sorry, this username is already taken"))
             }
         });
     }

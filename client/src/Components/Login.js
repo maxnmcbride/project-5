@@ -23,8 +23,7 @@ function Login({ setUser }) {
                     navigate("/userpage")
                 });
             } else {
-                response.json().then()
-                // NEED TO ADD ERROR HANDLING
+                response.json().then(alert("Sorry, it appears that your username or password was inproperly input. Please try again!"))
             }
         });
     }
