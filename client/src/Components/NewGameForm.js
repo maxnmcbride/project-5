@@ -40,8 +40,7 @@ function NewGameForm({ gameData, setGameData }) {
                     navigate("/videogames")
                 });
             } else {
-                console.log('oh boy')
-                // add error handling here!
+                response.json().then(alert("Sorry, this game is already in our library!"))
             }
         });
     }
@@ -123,7 +122,7 @@ function NewGameForm({ gameData, setGameData }) {
                         value={multiplayer}
                         onChange={() => setMultiplayer(!multiplayer)} />
                 </Form.Group>
-                    <label className='newgamelabeltext'>True</label>
+                <label className='newgamelabeltext'>True</label>
                 <Form.Button type='submit'>Submit New Game</Form.Button>
             </Form>
         </div>

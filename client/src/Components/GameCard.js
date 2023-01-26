@@ -5,13 +5,6 @@ function GameCard({ gameData, addGameToFavorites }) {
 
     const [basicPopUp, setBasicPopUp] = useState(false)
 
-    // const [isDisabled, setIsDisabled] = useState(false)
-
-    // const handleDisabled = () => {
-    //     console.log('Your button was clicked and is now disabled');
-    //     setDisabled(true);
-    //   }
-
     const openModal = () => {
         setBasicPopUp(true)
     };

@@ -3,9 +3,8 @@ import MyGameLibrary from "./MyGameLibrary";
 
 function Userpage({ user, setUser, removeGameFromFavorites }) {
 
-    const userAsync = user && <h1>WELCOME, {user.username.toUpperCase()}!</h1>
-    // const libraryMessage = (user.games.length == 1) ? <h2>There is 1 game in your library</h2> : <h2>There are {user.games.length} games in your library</h2>
-    
+    const userAsync = user && <h1 id="userpage_heading">WELCOME, {user.username.toUpperCase()}!</h1>
+
     const navigate = useNavigate();
     const handleLogOut = () => {
         fetch("/logout", { method: 'DELETE' })

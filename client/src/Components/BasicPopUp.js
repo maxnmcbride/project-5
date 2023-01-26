@@ -1,6 +1,6 @@
-function BasicPopUp({ setBasicPopUp, gameData, addToMyLibrary }) {
+import { useState } from "react";
 
-    console.log(gameData)
+function BasicPopUp({ setBasicPopUp, gameData, addToMyLibrary }) {
 
     const closePopUp = () => {
         setBasicPopUp(false)

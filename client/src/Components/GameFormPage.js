@@ -2,6 +2,7 @@ import NewGameForm from "./NewGameForm";
 import { Link } from "react-router-dom";
 
 function GameFormPage({ gameData, setGameData }) {
+
     return (
         <div id="gameformpage">
             <nav id="newgame_nav">

@@ -313,6 +313,13 @@ code {
   font-weight: bold;
 }
 
+#userpage_heading{
+  text-align: center;
+  font-size: 2rem;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-weight: bold;
+}
+
 #edit_user_container{
   padding-left:15rem;
 }
