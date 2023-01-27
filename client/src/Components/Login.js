@@ -23,7 +23,8 @@ function Login({ setUser }) {
                     navigate("/userpage")
                 });
             } else {
-                response.json().then(alert("Sorry, it appears that your username or password was inproperly input. Please try again!"))
+                response.json().then()
+                // NEED TO ADD ERROR HANDLING
             }
         });
     }
@@ -49,7 +50,7 @@ function Login({ setUser }) {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)} />
                 </Form.Field>
-                <Button type="submit">Log In</Button>
+                <Button type="submit" className='newgamelabeltext'>Log In</Button>
                 <Button id="signUplink"><Link to="/signup">Sign Up</Link></Button>
             </Form>
         </div>
