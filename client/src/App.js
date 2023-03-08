@@ -44,16 +44,16 @@ function App() {
 
   useEffect(() => {
     fetch('/games')
-      .then((response) => response.json())
-      .then((data)=>{setGameData(data)})
-    }, [])
-  //       if (data["errors"]){
-  //         alert(JSON.stringify(data))
-  //       } else {
-  //         setGameData(data)
-  //       }
-  //     })
-  // }, [])
+    .then(response => {
+      if (response.ok){
+        response.json()
+        .then(setGameData)
+      }
+    })
+  }, [])
+      // .then((response) => response.json())
+    //   .then((data)=>{setGameData(data)})
+    // }, [])
 
   return (
     <>
