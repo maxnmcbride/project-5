@@ -2,7 +2,7 @@ import { Form, Input, TextArea } from 'semantic-ui-react'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 
-function NewGameForm({ gameData, setGameData }) {
+function NewGameForm({ gameData, setGameData, setRerender}) {
 
     const navigate = useNavigate()
     const [developer, setDeveloper] = useState("")
@@ -37,6 +37,7 @@ function NewGameForm({ gameData, setGameData }) {
             if (response.ok) {
                 response.json().then((newGame) => {
                     setGameData([...gameData, newGame])
+                    setRerender(newGame)
                     navigate("/videogames")
                 });
             } else {

@@ -3,11 +3,6 @@ class GamesController < ApplicationController
         render json: Game.all, status: :ok
     end
 
-    # def show
-    #     game= Game.find(params[:id])
-    #     render json: game
-    # end
-
     def create
         game = Game.create!(games_params)
         render json: game, status: :created 

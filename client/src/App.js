@@ -10,6 +10,10 @@ import UserEditForm from './Components/UserEditForm';
 function App() {
 
   const [user, setUser] = useState(false);
+  const [rerender, setRerender] = useState([]);
+  // this is not scalable as whenmultiple users are on app
+  // if everyone is making updates it will continually rerender
+  // and slow it down because it needs significantly more information
 
   function addGameToFavorites(favorite) {
     const copyOfUser = { ...user }
@@ -50,7 +54,15 @@ function App() {
         .then(setGameData)
       }
     })
-  }, [])
+  }, [rerender])
+  // this is in the dependency array because when someone updates the games list we want the game
+  // list to rerender and show all new games...
+
+  // the dependency array is signifying to the fetch that it should rerender when
+  // a change is made to a specific component
+  // in this case [gameData]
+  // if someone adds a game or updates a games etc. the fetch knows to rerender
+
       // .then((response) => response.json())
     //   .then((data)=>{setGameData(data)})
     // }, [])
@@ -62,7 +74,7 @@ function App() {
         <Route path="/" element={<Homepage setUser={setUser} />}></Route>
         <Route path="/userpage" element={<Userpage removeGameFromFavorites={removeGameFromFavorites} user={user} setUser={setUser} />} />
         <Route path="/videogames" element={<VideoGamePage addGameToFavorites={addGameToFavorites} gameData={gameData} setGameData={setGameData} user={user} />} />
-        <Route path="/newgameform" element={<GameFormPage gameData={gameData} setGameData={setGameData} />} />
+        <Route path="/newgameform" element={<GameFormPage gameData={gameData} setGameData={setGameData} setRerender={setRerender}/>} />
         <Route path="/edituser" element={<UserEditForm user={user} setUser={setUser} />} />
       </Routes>
     </>

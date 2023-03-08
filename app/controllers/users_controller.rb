@@ -7,10 +7,6 @@ class UsersController < ApplicationController
         render json: user, status: :created
     end
 
-    def show
-        render json: @current_user
-    end
-
     def update
         user= User.find_by(id: params[:id])
         user.update(user_params)
